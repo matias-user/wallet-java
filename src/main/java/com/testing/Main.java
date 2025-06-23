@@ -1,6 +1,5 @@
 package com.testing;
 
-import com.testing.models.TransactionHistory;
 import com.testing.models.User;
 import com.testing.models.Wallet;
 import com.testing.services.UserService;
@@ -15,8 +14,6 @@ public class Main {
 
         System.out.println( userService.getBalance() );
 
-        for (TransactionHistory  transaction : userService.showTransaction()) {
-            System.out.println( transaction.getTransactionType().toString() );
-        }
+        userService.showTransaction().forEach( t -> System.out.println(t.getTransactionType()) );
     }
 }

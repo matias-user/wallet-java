@@ -28,13 +28,11 @@ public class UserService {
     public void deposit(double amount){
         this.user.getWallet().setQuantity(wallet.getQuantity() + amount);
         TransactionHistory transaction = this.createTransactionHistory(wallet, TransactionType.DEPOSIT);
-        this.transactionHistories.add( transaction );
         this.user.getTransactionHistories().add( transaction );
     }
     public void withdraw(double amount){
         this.user.getWallet().setQuantity( wallet.getQuantity() - amount);
-        TransactionHistory transaction = this.createTransactionHistory(wallet, TransactionType.DEPOSIT);
-        this.transactionHistories.add( transaction );
+        TransactionHistory transaction = this.createTransactionHistory(wallet, TransactionType.WITHDRAWAL);
         this.user.getTransactionHistories().add(transaction);
 
     }

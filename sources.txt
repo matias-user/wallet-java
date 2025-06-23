@@ -1,6 +1,6 @@
-src/main/java/com/testing/Main.java
 src/main/java/com/testing/services/UserService.java
-src/main/java/com/testing/enums/TransactionType.java
+src/main/java/com/testing/models/TransactionHistory.java
 src/main/java/com/testing/models/Wallet.java
 src/main/java/com/testing/models/User.java
-src/main/java/com/testing/models/TransactionHistory.java
+src/main/java/com/testing/enums/TransactionType.java
+src/main/java/com/testing/Main.java
